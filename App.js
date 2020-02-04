@@ -1,13 +1,21 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>hello, world</Text>
-    </View>
-  );
+
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <View>
+        <Image source={require('./assets/bball.jpeg')} style={{width: 100, height: 100}}/>
+        <Text style={styles.container}>Hello, world</Text>
+      </View>
+    )
+  }
 }
+
 
 const styles = StyleSheet.create({
   container: {
